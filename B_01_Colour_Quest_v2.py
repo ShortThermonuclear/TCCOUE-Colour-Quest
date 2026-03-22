@@ -286,8 +286,6 @@ class Play:
 
          # retrieve number of rounds played, add one to it and configure heading
         rounds_played = self.rounds_played.get()
-        self.rounds_played.set(rounds_played)
-
         rounds_wanted = self.rounds_wanted.get()
 
         # get round colours and median score...
@@ -331,7 +329,7 @@ class Play:
         # the number of rounds won
         rounds_played = self.rounds_played.get()
         rounds_played += 1
-        self.rounds_played = self.rounds_played.get()
+        self.rounds_played.set(rounds_played)
 
         rounds_won = self.rounds_won.get()
 
